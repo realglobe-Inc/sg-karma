@@ -1,2 +1,9 @@
 # sg-karma
-Karma package set
+
+karma + webpack でテストするために必要なパッケージのミニマルセット。
+
+## Install
+
+```sh
+$ npm i -D sg-karma
+```

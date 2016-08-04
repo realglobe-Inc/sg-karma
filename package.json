@@ -1,0 +1,44 @@
+{
+  "name": "sg-karma",
+  "version": "1.0.0",
+  "description": "Karma package set",
+  "main": "lib",
+  "scripts": {
+    "test": "karma start"
+  },
+  "repository": "realglobe-Inc/sg-karma",
+  "keywords": [
+    "karma"
+  ],
+  "author": "FujiHaruka",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/realglobe-Inc/sg-karma/issues"
+  },
+  "homepage": "https://github.com/realglobe-Inc/sg-karma#readme",
+  "dependencies": {
+    "babel-core": "^6.11.4",
+    "babel-loader": "^6.2.4",
+    "babel-polyfill": "^6.9.1",
+    "babel-preset-es2015": "^6.9.0",
+    "json-loader": "^0.5.4",
+    "karma": "^1.1.2",
+    "karma-chrome-launcher": "^1.0.1",
+    "karma-firefox-launcher": "^1.0.0",
+    "karma-mocha": "^1.1.1",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webpack": "^1.7.0",
+    "mocha": "^3.0.0",
+    "webpack": "^1.13.1"
+  },
+  "devDependencies": {
+    "co": "^4.6.0"
+  },
+  "engines": {
+    "node": ">=6",
+    "npm": ">=3"
+  },
+  "publishConfig": {
+    "registry": "https://realglobe.artifactoryonline.com/realglobe/api/npm/npm-local"
+  }
+}

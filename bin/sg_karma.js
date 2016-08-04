@@ -70,7 +70,6 @@ function render () {
       let string = chunk.toString()
       let browsered = string.replace(/\/lib/g, '/' + browser)
       let karmad = browsered.replace(/mocha/g, 'karma')
-      console.log(karmad)
       this.push(Buffer.from(karmad))
       callback()
     })

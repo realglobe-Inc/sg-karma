@@ -1,8 +1,8 @@
 module.exports = function (config) {
   config.set({
-    browsers: process.env.CI ? ['Firefox'] : ['Chrome', 'Firefox'],
+    browsers: process.env.CI ? [ 'Firefox' ] : [ 'Chrome', 'Firefox' ],
 
-    frameworks: ['mocha'],
+    frameworks: [ 'mocha' ],
 
     singleRun: true,
 
@@ -14,7 +14,7 @@ module.exports = function (config) {
       'test/test_index.karma.js': [ 'webpack', 'sourcemap' ]
     },
 
-    reporters: ['dots'],
+    reporters: [ 'mocha' ],
 
     webpack: {
       devtool: 'inline-source-map',

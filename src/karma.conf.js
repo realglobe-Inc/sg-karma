@@ -14,7 +14,7 @@ module.exports = function (config) {
       'test/test_index.karma.js': [ 'webpack', 'sourcemap' ]
     },
 
-    reporters: ['dots'],
+    reporters: [ 'mocha' ],
 
     webpack: {
       devtool: 'inline-source-map',

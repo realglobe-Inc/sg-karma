@@ -4,6 +4,9 @@ node_js:
 addons:
   firefox: "43.0"
 before_install:
+- npm i npm-cli-login -g
+- echo "NPM_USER=${NPM_USER}"
+- npm-cli-login -u "${NPM_USER}" -p "${NPM_PASSWORD}" -e "${NPM_EMAIL}"
 - npm install istanbul mocha -g
 - export DISPLAY=:99.0
 - sh -e /etc/init.d/xvfb start
@@ -15,4 +18,4 @@ after_success:
 - ./ci/travis/publish.js
 - ./ci/travis/push_sugos_index.js
 env:
-  secure: "oRf28GPxT4+PIGeIGjn2LsB775NblRkjM8lenqt/NIywTlgpe5W+uXmymHDFRk7QizNNj59NCJIqNKYf03fEc2i7B4dZiohuadX9x1Gkejlrmyb8O3OZeCDHF1CsPnfThmKN++JNUsoPF/oyqSOrzkunkjP1Q5Hj/OO/03PRuwr1oBMPuo57XculwedrDi9vuyaPUrtVeCF1DBS010HyNr+D5WTo0cAZthlGuZmnYtTonlO3BSmSRjiEAYNJeI6KQNtBirECHct0m/Pe7ZKVi4Y7py2RziW8AqJeLfygQCjb4k5pbqNm1IPTuzK/LGE4W9SHl1MoBfprTIlJs4DFPse6a/rSOBU0Ra4Uw2vU4TrOqck3EqRn0V10gGIqfCeLi2slyT16Rni7brO/XCYbYcLgZw6WxJJgosKwOhv8VGqomvzf5t52m+49eLi8mseaiy8sk5nRa4eZNFQ8PGBTRqLv4nW0O0AGpbJYpmGAHXIi1MYGz22DD9dwlBnd8ICZtNtMXMCnT/qv4nO1Dt1Zd/PWbapRAV9l0FJQ+dldnYe53kN28TAUFqEp0fuKllRDUMCoJgvOuZdjlp3+5rze72bFVTbXiKBq5+czFEbpXHeMXXacdDv3ZuDZsBPeFO7AJqCNpxbuckY7ZtrJKxJJDoRnEpjAZoLa1SXImslZ9NY="
+  secure: "szSygRC3QByRhYxQhBRoeX7ZM/LdGAQyKU1nohBKCdI23Rjs9fTjbIk1h2l+EYM2Rdo7uQlIdf65mPFsEdA+BdwtgdfWuTn/poG8//2mJjoZZf0rT3UMFehUq5RGrdriATnikeataU6ShTJCeTDKeLxqIbbiaO/j587jSehyc2dCwnhdwDq7e1YqBA1TRIOkS6ljdMpVVc0bWHaI7clHc7ejz2Jj4ew9xv8Czrow79jpBu3tGjV8BYKIjFZMKnAA8JDq1sMrZA8VDM1EWMXDnVp38ieczY/LCc7WJLhdu17agF/9VXgCzTh6GCHPddOKp6CsH+hgwnPXFzxv6+a6EwINg87Bc+ekpwwosBWxvavnQ7TcKPIVzCPnXwtLD68M+x2pXVpNTcz87+BGxebeZqJIGHcC7SkXXIENMKk8eimULG3pIou53SIsJg5MG949Gz7vq+HtTHjFsSH3LXqSptbIMswZs1u3C4/jsq0e44iQPOcw8OjApmCT4oV65rkKKzE6viRzkwYtWUrj9WLQwou6waPoQ7ajJfK0yeLrKj199fO+/9EfsIrMOiA3ngzUW5TQDTmvYfDxGyj6SX4dsdgcU3ahJCxdY1GjIT/T6SLZz9yNq9fIso3boIvOx7LcQwQ+wcqsRVKXffpdEC73TZCv0KELGB0KxZns19GJOjI="

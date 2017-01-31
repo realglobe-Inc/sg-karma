@@ -6,14 +6,15 @@
     "sg-karma": "./bin/sg_karma.js"
   },
   "scripts": {
-    "test": "karma start"
+    "test": "karma start",
+    "prepare": "node ./ci/build.js"
   },
   "repository": "realglobe-Inc/sg-karma",
   "keywords": [
     "karma"
   ],
   "author": "FujiHaruka",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/realglobe-Inc/sg-karma/issues"
   },
@@ -39,14 +40,14 @@
     "webpack": "^1.13.1"
   },
   "devDependencies": {
+    "ape-tasking": "^4.0.9",
+    "ape-tmpl": "^5.0.20",
     "co": "^4.6.0",
-    "sg-travis": "^1.1.27"
+    "coz": "^6.0.20",
+    "sugos-travis": "^2.0.5"
   },
   "engines": {
     "node": ">=6",
-    "npm": ">=3"
-  },
-  "publishConfig": {
-    "registry": "https://realglobe.artifactoryonline.com/realglobe/api/npm/npm-local"
+    "npm": ">=4"
   }
 }
